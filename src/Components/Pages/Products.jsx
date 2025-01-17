@@ -5,6 +5,7 @@ import { gettheid } from '../../Redux/ProductsSlice';
 import { useNavigate } from 'react-router-dom';
 import { setdata } from '../../Redux/ApiResponse';
 
+
 const Products = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.Productresponsedata.data);
@@ -35,7 +36,11 @@ const Products = () => {
   );
 
   return (
-    <div className="bg-gray-900 min-h-screen">
+ 
+    <>
+     
+      <div className="bg-gray-900 min-h-screen">
+        
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight text-yellow-400">View All Products</h2>
         {loading ? (
@@ -52,7 +57,7 @@ const Products = () => {
                   onClick={() => handleTheId(id)}
                 >
                   <div className="flex align-center justify-center">
-                    <img alt={title} src={image} className="h-[200px] w-[200px] object-contain rounded" />
+                    <img alt={title} src={image} className="h-[250px] w-[300px] object-contain rounded" />
                   </div>
                   <div className="mt-4 flex justify-between p-2">
                     <p className="mt-1 text-lg font-semibold">{title}</p>
@@ -67,7 +72,7 @@ const Products = () => {
           </div>
         )}
       </div>
-    </div>
+    </div></>
   );
 };
 

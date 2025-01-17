@@ -4,9 +4,9 @@ export const InputChangeSlice = createSlice({
     initialState: {
         Searchdata:null
     }, reducers: {
-        searchdata: (state, action) => {
+        setsearchdata: (state, action) => {
             state.Searchdata=action.payload        }
     }
 })
-export const { searchdata } = InputChangeSlice.actions;
+export const { setsearchdata } = InputChangeSlice.actions;
 export default InputChangeSlice.reducer

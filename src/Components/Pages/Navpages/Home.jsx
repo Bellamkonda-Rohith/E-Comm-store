@@ -1,8 +1,10 @@
 import personimg from '../Navpages/personshoping.webp';
+import Products from '../Products';
 
 const Home = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 h-screen bg-gray-900">
+    <>
+     <div className="grid grid-cols-1 md:grid-cols-2 h-screen bg-gray-900">
       <div className="flex flex-col justify-center items-start p-10 text-center md:text-left">
         <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
           <span className="block">Welcome to the</span>
@@ -23,7 +25,10 @@ const Home = () => {
       <div className="flex justify-center items-center">
         <img src={personimg} alt="Online Shopping" className="rounded-lg shadow-lg max-w-full h-[90vh] p-5" />
       </div>
-    </div>
+      </div>
+      <div>
+      <Products/></div></>
+  
   );
 };
 

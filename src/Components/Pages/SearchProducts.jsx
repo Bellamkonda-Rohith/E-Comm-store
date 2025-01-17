@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const SearchProducts = () => {
   const inputdata = useSelector((state) => state.Searchdata.Searchdata);
   const products = useSelector((state) => state.Productresponsedata.data);
-
+console.log("inputdata",inputdata)
   console.log("Input Data:", inputdata);
   console.log("Products:", products);
 
